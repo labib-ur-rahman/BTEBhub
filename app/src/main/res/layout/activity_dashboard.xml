@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sideBar_Bg">
+
+    <RelativeLayout
+        android:id="@+id/sideBar"
+        style="@style/sideBar"
+        android:paddingBottom="@dimen/size_2xlarge"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/sideBarProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/size_2xlarge"
+                android:layout_marginBottom="@dimen/size_small"
+                app:cardCornerRadius="100dp">
+
+                <ImageView
+                    android:src="@drawable/logo"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/sideBarTitle"
+                style="@style/sideBarTitle"
+                android:text="@string/bteb" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/sideBar_BottomLayout"
+            android:layout_below="@+id/sideBarProfile"
+            android:layout_margin="10dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/btnIndividualResult"
+                    style="@style/sl_sidebar_icon"
+                    android:background="@drawable/sl_button_selected"
+                    android:contentDescription="@string/sl_icon"
+                    android:src="@drawable/sl_user_rounded" />
+
+                <ImageView
+                    android:id="@+id/btnGroupResult"
+                    style="@style/sl_sidebar_icon"
+                    android:contentDescription="@string/sl_icon"
+                    android:src="@drawable/sl_all_users" />
+
+                <ImageView
+                    android:id="@+id/btnNotice"
+                    style="@style/sl_sidebar_icon"
+                    android:contentDescription="@string/sl_icon"
+                    android:src="@drawable/sl_bell" />
+
+                <ImageView
+                    android:id="@+id/btnFavorite"
+                    style="@style/sl_sidebar_icon"
+                    android:contentDescription="@string/sl_icon"
+                    android:src="@drawable/sl_hearts" />
+
+                <ImageView
+                    android:id="@+id/btnCoder"
+                    style="@style/sl_sidebar_icon"
+                    android:contentDescription="@string/sl_icon"
+                    android:src="@drawable/sl_code_circle" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/sideBar_BottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/sideBar_btnTheme"
+                style="@style/sl_sidebar_icon"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/sl_button_selected"
+                android:contentDescription="@string/sl_icon"
+                android:src="@drawable/sl_sun" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:background="@color/mainContainer_Bg"
+        android:id="@+id/navHostFragmentContainerView"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sideBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/result_nav_graph" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
