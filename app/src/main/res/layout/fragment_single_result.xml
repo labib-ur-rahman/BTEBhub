@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainContainer_Bg"
+    tools:context=".fragment.SingleResultFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="-5dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/sl_icon"
+            android:src="@drawable/sl_left_arrow_back_small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvHeading"
+            style="@style/mainContainer_H1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/individual_result"
+            app:layout_constraintBottom_toBottomOf="@+id/btnBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnBack"
+            app:layout_constraintTop_toTopOf="@+id/btnBack"
+            app:layout_constraintVertical_bias="0.70" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="6dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvHeading">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutTechnology"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/select_exam">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/autoCompleteTechnology"
+                        tools:ignore="LabelFor"
+                        style="@style/input_layout_dropdown" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/etLabelRoll"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    app:hintTextColor="@color/mainContainer_HeadingText"
+                    android:hint="@string/enter_roll_number"
+                    app:layout_constraintEnd_toStartOf="@+id/btnViewResult"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvHeading">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etRoll"
+                        style="@style/input_layout_dropdown"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnViewResult"
+                    android:text="@string/view_result"
+                    style="@style/input_layout_button" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/result_info_container">
+
+                <TextView
+                    android:text="একজন ব্যক্তির ফলাফল"
+                    style="@style/result_info_heading" />
+
+                <TextView
+                    android:text="এই অ্যাপে ব্যক্তিগত ফলাফল বাংলাদেশ কারিগরি শিক্ষা বোর্ড (BTEB) দ্বারা প্রকাশিত একটি ডিপ্লোমা / পলিটেকনিক শিক্ষার্থীদের সমস্ত সেমিস্টার ফলাফল দেখায়।"
+                    style="@style/result_info_paragraph" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/result_info_container">
+
+                <TextView
+                    android:text="রোল নম্বর"
+                    style="@style/result_info_heading" />
+
+                <TextView
+                    android:text="রোল নম্বর হল আপনার অ্যাডমিট কার্ড বা রেজিস্ট্রেশন কার্ডে থাকা 6-সংখ্যার নম্বর।"
+                    style="@style/result_info_paragraph" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/result_info_container">
+
+                <TextView
+                    android:text="সেমিস্টারের ফলাফল"
+                    style="@style/result_info_heading" />
+
+                <TextView
+                    android:text="একটি একক সেমিস্টারের একাধিক ফলাফল থাকতে পারে। তবে প্রতিটি ফলাফলে একটি প্রকাশের তারিখ থাকবে। এবং শুধুমাত্র সর্বশেষ ফলাফল হল সেমিস্টারের জন্য আপনার চূড়ান্ত ফলাফল। আগের ফলাফল শুধুই ইতিহাস। সুতরাং আগের ফলাফল দেখে বিভ্রান্ত হবেন না।"
+                    style="@style/result_info_paragraph" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/result_info_container">
+
+                <TextView
+                    android:text="Referred বিষয়"
+                    style="@style/result_info_heading" />
+
+                <TextView
+                    android:text="Referred বিষয় তালিকার প্রতিটি বিষয় রয়েছে শুরুতে বিষয় কোড এবং শেষে বন্ধনীতে মোড়ানো বিষয়ের ব্যর্থতার ধরন।"
+                    style="@style/result_info_paragraph" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/result_info_container">
+
+                <TextView
+                    android:text="জিপিএ প্রকাশিত হয়নি (ব্যাখ্যা করা হয়েছে)"
+                    style="@style/result_info_heading" />
+
+                <TextView
+                    android:text="ধরা যাক কেউ 6 তম সেমিস্টারে একটি বিষয়ে ফেল করেছে এবং পরবর্তী সেমিস্টারে (7 তম) উল্লেখিত বিষয়ে পাস করেছে। তারা চলতি সেমিস্টারের (৭ম) ফলাফল পাবে, তবে আগের সেমিস্টারের (৬ষ্ঠ) জিপিএ পাবে না, যদিও তারা ৬ষ্ঠ সেমিস্টারে পাস করেছে। সেক্ষেত্রে, আপনি জিপিএর জন্য আপনার প্রতিষ্ঠানের সাথে যোগাযোগ করতে পারেন।"
+                    style="@style/result_info_paragraph" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/result_info_container">
+
+                <TextView
+                    android:text="পূর্ববর্তী সেমিস্টারে Referred (ব্যাখ্যা করা হয়েছে)"
+                    style="@style/result_info_heading" />
+
+                <TextView
+                    android:text="কেউ যদি আগের সেমিস্টারের কোনো বিষয়ে এখনও পাশ করতে না পারে, তাহলে সে চলতি সেমিস্টারের জিপিএ পাবে না। একটি সেমিস্টারে জিপিএ পেতে, আপনার কোনো সেমিস্টারে উল্লেখিত বিষয় থাকতে পারবেন না।"
+                    style="@style/result_info_paragraph" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/result_info_container">
+
+                <TextView
+                    android:text="সাবজেক্ট পাশ করা বাকি (Subjects yet to pass)"
+                    style="@style/result_info_heading" />
+
+                <TextView
+                    android:text="আপনার সর্বশেষ ফলাফলে অন্তর্ভুক্ত বিষয়গুলি এখনও পাস করা হয়নি। এক্ষেত্রে লাল রঙের বিষয়গুলো তাদের নিজস্ব সেমিস্টার থেকে তুলে ধরা হয়।"
+                    style="@style/result_info_paragraph" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

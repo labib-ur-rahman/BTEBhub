@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Google Color -->
+    <color name="google__Red">#E94235</color>
+    <color name="google__Yellow">#FBBC04</color>
+    <color name="google__Green">#34A853</color>
+    <color name="google__Blue">#4285F4</color>
+
+
+
+    <color name="grade_diamond">#2678FF</color>
+    <color name="grade_gold">#F5B100</color>
+    <color name="grade_silver">#737373</color>
+    <color name="grade_bronze">#b96d1f</color>
+    <color name="grade_red">#ff6e6e</color>
+
+    <!-- Left Side Bar Color -->
+    <color name="sideBar_Bg">#FFFFFFFF</color>
+    <color name="sideBar_ActiveBtnBg">#f4f4f4</color>
+    <color name="sideBar_ActiveBtn">#242424</color>
+    <color name="sideBar_InactiveBtn">#656565</color>
+    <color name="sideBar_iconTint">#8692f7</color>
+
+    <!-- Main Container_bg Color -->
+    <color name="mainContainer_Bg">#f4f4f4</color>
+    <color name="mainContainer_Active">#FFFFFFFF</color>
+    <color name="mainContainer_HeadingText">#222222</color>
+    <color name="mainContainer_SubHeadingText">#545454</color>
+    <color name="mainContainer_SelectedText">#4285F4</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- Login or Signup Button -->
+    <color name="googleContinue__Bg">#FFFFFF</color>
+    <color name="googleContinue__Text">#1F1F1F</color>
+    <color name="BtnGradientBlue__Dark">#8AA2FF</color>
+    <color name="BtnGradientBlue__Light">#A3F6FF</color>
+
+    <!-- For Unique Style -->
+    <color name="underlineText">#E3F30D</color>
+    <color name="ic_light">#1C274C</color>
+    <color name="bg_card_item_color">#FDFDFD</color>
+    <color name="ic_secoundary">#389ad6</color>
+    <color name="ic_optional">#9dcbf4</color>
+    <color name="shimmer">#C2C2C2</color>
+    <color name="shimmer_light">#EBEBEB</color>
+    <color name="blue__LavenderBlue">#8692f7</color>          <!-- lavender replace -->
+    <color name="lightYellow">#fda04d</color>
+
+    <!-- ================================================================================================== -->
+    <!--                                           MODERN COLOR                                             -->
+    <!-- ================================================================================================== -->
+
+    <!-- Orange ~ Modern => Home -->
+    <color name="orange_active_color">#fae1bb</color>
+    <color name="orange_light_color">#f8e9d4</color>
+    <color name="orange_main_color">#ffcc80</color>
+    <color name="orange_text_color">#ff7700</color>
+    <color name="orange_fill_color">#B7FF4000</color>
+    <color name="orange_bg_color">#33ffcc80</color>
+    <color name="orange_edition_color">#FFE2C2</color>
+    <color name="orange_dialog_color">#FFE4BC</color>
+
+    <!-- Blue ~ Modern => Books -->
+    <color name="blue_active_color">#9ee6f0</color>
+    <color name="blue_light_color">#c5eae9</color>
+    <color name="blue_main_color">#42dffe</color>
+    <color name="blue_text_color">#1194AA</color>
+    <color name="blue_fill_color">#1194AA</color>
+    <color name="blue_bg_color">#331194AA</color>
+
+    <!-- Green ~ Modern => Notice -->
+    <color name="green_active_color">#b1edca</color>
+    <color name="green_light_color">#d0eed3</color>
+    <color name="green_main_color">#68ecb4</color>
+    <color name="green_main_love_color">#68ecb4</color>
+    <color name="green_main_loved_color">#FFC0C0</color>
+    <color name="green_text_color">#16b768</color>
+    <color name="green_fill_color">#B716b768</color>
+    <color name="green_bg_color">#3316b768</color>
+
+    <!-- Purple ~ Modern => Explore -->
+    <color name="purple_active_color">#A3A7FB</color>
+    <color name="purple_light_color">#CED1FF</color>
+    <color name="purple_main_color">#8692f7</color>
+    <color name="purple_text_color">#5B37B7</color>
+    <color name="purple_fill_color">#B75B37B7</color>
+    <color name="purple_bg_color">#335B37B7</color>
+
+    <!-- Red ~ Modern -->
+    <color name="indian_red_active_color">#edb1b1</color>
+    <color name="indian_red_light_color">#f8d4d4</color>
+    <color name="indian_red_main_color">#f59595</color>
+    <color name="indian_red_text_color">#bd505a</color>
+
+    <!-- Pink ~ Modern -->
+    <color name="pink_active_color">#fecbe9</color>
+    <color name="pink_flow_color">#f8bbf0</color>
+    <color name="pink_light_color">#fddae5</color>
+    <color name="pink_main_color">#fea9f3</color>
+    <color name="pink_text_color">#ff6ccc</color>
+
+    <!-- Yellow ~ Modern -->
+    <color name="yellow_active_color">#f0e68c</color>
+    <color name="yellow_flow_color">#ffdf34</color>
+    <color name="yellow_light_color">#fffacd</color>
+    <color name="yellow_main_color">#FFDA00</color>
+    <color name="yellow_text_color">#d5b405</color>
+    <color name="yellow_bg_color">#33FFDA00</color>
+
+
+
+</resources>
