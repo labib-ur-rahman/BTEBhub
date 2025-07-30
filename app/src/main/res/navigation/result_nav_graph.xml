@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/result_nav_graph"
+    app:startDestination="@id/individualResultFragment">
+
+
+    <fragment
+        android:id="@+id/individualResultFragment"
+        android:name="com.rudhashi.btebhub.fragment.SingleResultFragment"
+        android:label="fragment_single_result"
+        tools:layout="@layout/fragment_single_result" >
+        <action
+            android:id="@+id/action_individualResultFragment_to_detailsSingleResultFragment"
+            app:destination="@id/detailsSingleResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupResultFragment"
+        android:name="com.rudhashi.btebhub.fragment.GroupResultFragment"
+        android:label="GroupResultFragment" >
+        <action
+            android:id="@+id/action_groupResultFragment_to_detailsGroupResultFragment"
+            app:destination="@id/detailsGroupResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/noticeFragment"
+        android:name="com.rudhashi.btebhub.fragment.NoticeFragment"
+        android:label="fragment_notice"
+        tools:layout="@layout/fragment_notice" >
+    </fragment>
+    <fragment
+        android:id="@+id/developerFragment"
+        android:name="com.rudhashi.btebhub.fragment.DeveloperFragment"
+        android:label="fragment_developer"
+        tools:layout="@layout/fragment_developer" />
+    <fragment
+        android:id="@+id/favouriteFragment"
+        android:name="com.rudhashi.btebhub.fragment.FavouriteFragment"
+        android:label="fragment_favourite"
+        tools:layout="@layout/fragment_favourite" >
+        <action
+            android:id="@+id/action_favouriteFragment_to_detailsSingleResultFragment"
+            app:destination="@id/detailsSingleResultFragment" />
+        <action
+            android:id="@+id/action_favouriteFragment_to_detailsGroupResultFragment"
+            app:destination="@id/detailsGroupResultFragment" />
+        <action
+            android:id="@+id/action_favouriteFragment_to_detailsSingleResultFragment2"
+            app:destination="@id/detailsSingleResultFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailsSingleResultFragment"
+        android:name="com.rudhashi.btebhub.fragment.DetailsSingleResultFragment"
+        android:label="fragment_details_single_result"
+        tools:layout="@layout/fragment_details_single_result" >
+        <argument
+            android:name="roll"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_detailsSingleResultFragment_to_favouriteFragment"
+            app:destination="@id/favouriteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsGroupResultFragment"
+        android:name="com.rudhashi.btebhub.fragment.DetailsGroupResultFragment"
+        android:label="fragment_details_group_result"
+        tools:layout="@layout/fragment_details_group_result" >
+        <action
+            android:id="@+id/action_detailsGroupResultFragment_to_favouriteFragment"
+            app:destination="@id/favouriteFragment" />
+        <argument
+            android:name="exam"
+            app:argType="string" />
+        <argument
+            android:name="semester"
+            app:argType="string" />
+        <argument
+            android:name="regulation"
+            app:argType="string" />
+        <argument
+            android:name="rollComb"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_detailsGroupResultFragment_to_detailsSingleResultFragment"
+            app:destination="@id/detailsSingleResultFragment" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="-5dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/sl_icon"
+            android:src="@drawable/sl_left_arrow_back_small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvHeader"
+            style="@style/mainContainer_H1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Results for"
+            app:layout_constraintBottom_toBottomOf="@+id/btnBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnBack"
+            app:layout_constraintTop_toTopOf="@+id/btnBack"
+            app:layout_constraintVertical_bias="0.70" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/containerLay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/header">
+
+        <LinearLayout
+            android:id="@+id/etLabelRoll"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/shape_bg_gradient_left_right"
+            android:fontFamily="@font/roboto"
+            android:hint="@string/enter_roll_number"
+            android:orientation="vertical"
+            android:padding="10dp"
+            app:hintTextColor="@color/mainContainer_HeadingText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/Rounded">
+
+            <TextView
+                android:id="@+id/textViewExam"
+                style="@style/result_info_heading"
+                android:lineSpacingExtra="-7dp" />
+
+            <TextView
+                android:id="@+id/textViewQueryRolls"
+                style="@style/result_info_paragraph"
+                android:lineSpacingExtra="-7dp" />
+
+            <TextView
+                android:id="@+id/textViewDate"
+                style="@style/result_info_paragraph"
+                android:lineSpacingExtra="-7dp" />
+
+            <TextView
+                android:id="@+id/textViewItemTotalCount"
+                style="@style/result_info_paragraph"
+                android:lineSpacingExtra="-7dp" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewResults"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            tools:listitem="@layout/item_result" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/header"
+        android:contentDescription="@string/logo"
+        android:gravity="center"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnFavorite"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15dp"
+        android:background="@drawable/fav_add"
+        android:elevation="10dp"
+        android:fontFamily="@font/roboto"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:text="@string/add_to_favorite"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

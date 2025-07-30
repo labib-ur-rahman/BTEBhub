@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Left Side Bar Color -->
+    <color name="sideBar_Bg">#252525</color>
+    <color name="sideBar_ActiveBtnBg">#656565</color>
+    <color name="sideBar_ActiveBtn">#FFFFFFFF</color>
+    <color name="sideBar_InactiveBtn">#A8A8A8</color>
+    <color name="sideBar_iconTint">#FBBC04</color>
+
+    <!-- Main Container_bg Color -->
+    <color name="mainContainer_Bg">#222021</color>
+    <color name="mainContainer_Active">#242424</color>
+    <color name="mainContainer_HeadingText">#F6F6F6</color>
+    <color name="mainContainer_SubHeadingText">#D3D3D3</color>
+    <color name="mainContainer_SelectedText">#82ADFF</color>
+
+    <!-- Login or Signup Button -->
+    <color name="googleContinue__Bg">#000000</color>
+    <color name="googleContinue__Text">#D3D3D3</color>
+    <color name="BtnGradientBlue__Dark">#6585fd</color>
+    <color name="BtnGradientBlue__Light">#42d4e6</color>
+
+    <!-- For Unique Style -->
+    <color name="underlineText">#80622A</color>
+    <color name="ic_light">#D5DDFA</color>
+    <color name="bg_card_item_color">#313131</color>
+    <color name="ic_secoundary">#183C57</color>
+    <color name="ic_optional">#435868</color>
+
+
+    <!-- Modern Light Color -->
+    <color name="orange_light_color">#33f8e9d4</color>
+    <color name="blue_light_color">#33c5eae9</color>
+    <color name="green_light_color">#33d0eed3</color>
+    <color name="pink_light_color">#33fddae5</color>
+    <color name="indian_red_light_color">#33f8d4d4</color>
+    <color name="purple_light_color">#33C9CCFF</color>
+    <color name="orange_dialog_color">#414B42</color>
+
+</resources>
