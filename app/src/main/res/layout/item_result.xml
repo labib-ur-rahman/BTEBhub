@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="18dp"
+    android:layout_marginTop="0dp"
+    style="@style/result_info_container">
+
+
+    <LinearLayout
+        android:id="@+id/resultView"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@id/medal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/abc_orange_main"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/semNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lobster_two_bold"
+                    android:text="5"
+                    android:textColor="@color/white"
+                    android:textSize="23dp"
+                    app:layout_constraintEnd_toStartOf="@+id/th"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/th"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lobster_two_bold"
+                    android:text="th"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/semNo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/semNo"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.70" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/semesterText"
+            style="@style/result_info_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lobster_two_bold"
+            android:text="Semester"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/gpaOrFailedText"
+            style="@style/result_info_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-5dp"
+            android:fontFamily="@font/rowdies"
+            android:letterSpacing="0.05"
+            android:text="3.56"
+            android:textColor="@color/mainContainer_HeadingText"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/semImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/semImage"
+            app:layout_constraintTop_toTopOf="@+id/semImage" />
+
+        <TextView
+            android:id="@+id/tvLaterGrade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/hind_siliguri"
+            android:text="Later Grade : A+"
+            android:textColor="@color/mainContainer_SubHeadingText"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="-14dp"
+            app:layout_constraintEnd_toEndOf="@+id/resultView"
+            app:layout_constraintStart_toStartOf="@+id/resultView"
+            app:layout_constraintTop_toBottomOf="@+id/resultView" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/medal"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/rank_diamond_medal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/resultView"
+        app:layout_constraintTop_toTopOf="@+id/resultView" />
+
+
+    <TextView
+        android:id="@+id/relativeDateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hind_siliguri"
+        android:text="@string/_2_days_ago"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/mainContainer_SubHeadingText"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/medal"
+        app:layout_constraintStart_toStartOf="@+id/medal"
+        app:layout_constraintTop_toBottomOf="@+id/medal" />
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/hind_siliguri"
+        android:text="Status: Passed"
+        android:textStyle="bold"
+        android:textColor="@color/google__Green"
+        android:textSize="@dimen/_16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultView" />
+
+    <LinearLayout
+        android:id="@+id/infoView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_bg_gradient_left"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/statusText"
+        tools:layout_editor_absoluteX="15dp">
+
+        <TextView
+            android:id="@+id/failedSubjects"
+            style="@style/result_info_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/hind_siliguri"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:text="Failed Subjects: 66653 (Theory), 66653 (Theory), 66653 (Theory), 66653 (Theory)"
+            android:textColor="@color/grade_red"
+            android:textSize="@dimen/_16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/semImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/semImage"
+            app:layout_constraintTop_toTopOf="@+id/semImage" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

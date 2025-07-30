@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:background="@drawable/shape_bg_gradient_top"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/abc_orange_main"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textViewSerial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lobster_two_bold"
+            android:text="15"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewRoll"
+        style="@style/result_info_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lobster_two_bold"
+        android:layout_marginTop="7dp"
+        android:text="511023"
+        android:textSize="19sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewResult"
+        style="@style/result_info_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rowdies"
+        android:letterSpacing="0.05"
+        android:text="3.56"
+        android:textColor="@color/mainContainer_HeadingText"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/semImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/semImage"
+        app:layout_constraintTop_toTopOf="@+id/semImage" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hind_siliguri"
+        android:text="5 referred"
+        android:textColor="@color/mainContainer_SubHeadingText"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="-10dp"
+        app:layout_constraintEnd_toEndOf="@+id/resultView"
+        app:layout_constraintStart_toStartOf="@+id/resultView"
+        app:layout_constraintTop_toBottomOf="@+id/resultView" />
+
+</LinearLayout>
