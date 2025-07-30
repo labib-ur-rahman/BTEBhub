@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">BTEB Hub</string>
+    <string name="bteb">BTEB\nHub</string>
+    <string name="sl_icon">SL Icon</string>
+    <string name="labib_ur_rahman">Labib UR Rahman</string>
+    <string name="_511023">511023</string>
+    <string name="kurigram_polytechnic_institute">Kurigram Polytechnic Institute</string>
+    <string name="favorite_individuals">Favorite Individuals</string>
+    <string name="view_result">View Result</string>
+    <string name="view_group_results">View Group Results</string>
+    <string name="enter_roll_number">Roll Number</string>
+    <string name="individual_result">Individual Result</string>
+    <string name="_2_days_ago">2 days ago</string>
+    <string name="group_result">Group Results</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_to_favorite">Add to favorite</string>
+    <string name="remove_from_favorite">Remove from favorite</string>
+    <string name="diploma_in_engineering">Diploma in Engineering</string>
+    <string name="saved_favorites_list">Saved Favorites List</string>
+    <string name="group_info_short">রোল নম্বর অনুসারে গ্রুপ তালিকা বাছাই করতে, \"Roll\" শিরোনামে ক্লিক করুন। এবং ফলাফল অনুসারে সাজাতে, \"Results\" শিরোনামে ক্লিক করুন।</string>
+    <string name="select_exam">Exam</string>
+    <string name="select_semester">Semester</string>
+    <string name="select_regulation">Regulation</string>
+    <string name="technology_regulation">%1$s (%2$s)</string>
+    <string name="logo">Logo</string>
+</resources>
