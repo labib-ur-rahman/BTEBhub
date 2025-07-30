@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainContainer_Bg">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="-5dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/sl_icon"
+            android:src="@drawable/sl_left_arrow_back_small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvHeading"
+            style="@style/mainContainer_H1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/group_result"
+            app:layout_constraintBottom_toBottomOf="@+id/btnBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnBack"
+            app:layout_constraintTop_toTopOf="@+id/btnBack"
+            app:layout_constraintVertical_bias="0.70" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="6dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvHeading">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutTechnology"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/select_exam">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/autoCompleteTechnology"
+                        tools:ignore="LabelFor"
+                        style="@style/input_layout_dropdown" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutSemester"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/select_semester">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/autoCompleteSemester"
+                        tools:ignore="LabelFor"
+                        style="@style/input_layout_dropdown" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutRegulation"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/select_regulation">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/autoCompleteRegulation"
+                        tools:ignore="LabelFor"
+                        style="@style/input_layout_dropdown" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:weightSum="2"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/etLabelStartRoll"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:layout_marginEnd="5dp"
+                        android:hint="Start Roll"
+                        android:layout_weight="1"
+                        app:hintTextColor="@color/mainContainer_HeadingText">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editTextStartRoll"
+                            android:inputType="number"
+                            style="@style/input_layout_dropdown" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/etLabelEndRoll"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="@font/roboto"
+                        android:hint="End Roll"
+                        app:hintTextColor="@color/mainContainer_HeadingText">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editTextEndRoll"
+                            android:inputType="number"
+                            style="@style/input_layout_dropdown" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonViewResult"
+                    android:text="@string/view_group_results"
+                    style="@style/input_layout_button" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/result_info_container">
+
+                <TextView
+                    android:text="গ্রুপ ফলাফল (ব্যাখ্যা করা হয়েছে)"
+                    style="@style/result_info_heading" />
+
+                <TextView
+                    android:text="ধরুন আপনি আপনার ক্লাসের রোল নম্বর (512002 থেকে 512026) এর ফলাফল দেখতে চান। সেক্ষেত্রে, প্রথমে আপনাকে আপনার Class Start Roll 512002 এবং আপনার Class End Roll 512026 লিখতে হবে। তারপর, সেমিস্টার এবং আপনার পরীক্ষার নাম নির্বাচন করুন। তারপর, সমস্ত ফলাফল দেখতে ফলাফল দেখুন বোতামে ক্লিক করুন।"
+                    style="@style/result_info_paragraph" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/result_info_container">
+
+                <TextView
+                    android:text="ফলাফল বা রোল নম্বর অনুসারে সাজান"
+                    style="@style/result_info_heading" />
+
+                <TextView
+                    android:text="@string/group_info_short"
+                    style="@style/result_info_paragraph" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/result_info_container">
+
+                <TextView
+                    android:text="Referred বিষয় দেখুন"
+                    style="@style/result_info_heading" />
+
+                <TextView
+                    android:text="রেফার্ড বা অকৃতকার্য বিষয় দেখতে, লাল রেফার্ড লেখায় ক্লিক করুন। একটি ডায়ালগ পপ আপ হবে এবং বিষয় কোড, নাম এবং ব্যর্থতার ধরন দেখাবে।"
+                    style="@style/result_info_paragraph" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
